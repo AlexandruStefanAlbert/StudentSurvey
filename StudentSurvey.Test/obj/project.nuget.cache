@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "5LP4C9/4vmVuNg268Wxmyb8qchiZ359u2+Ggg6wLDIt8ltflfMhh093+5S4chWTQq5D1zZP+anKJ/mNYq21iIQ==",
+  "dgSpecHash": "XwNxbODnVlpukLarHa6RZ1XFi/dOMcOWFkNbRRl6+JZXhZV5K/GJsEUWcKdCCjN8sfN7DeUCxD59mOdnbvua1g==",
   "success": true,
   "projectFilePath": "D:\\Desktop\\StudentSurvey\\StudentSurvey\\StudentSurvey.Test\\StudentSurvey.Test.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\albertbvi12\\.nuget\\packages\\automapper\\11.0.0\\automapper.11.0.0.nupkg.sha512",
     "C:\\Users\\albertbvi12\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
     "C:\\Users\\albertbvi12\\.nuget\\packages\\coverlet.collector\\3.0.2\\coverlet.collector.3.0.2.nupkg.sha512",
+    "C:\\Users\\albertbvi12\\.nuget\\packages\\fluentassertions\\5.10.3\\fluentassertions.5.10.3.nupkg.sha512",
     "C:\\Users\\albertbvi12\\.nuget\\packages\\fluentvalidation\\11.1.0\\fluentvalidation.11.1.0.nupkg.sha512",
     "C:\\Users\\albertbvi12\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.1.2\\fluentvalidation.aspnetcore.11.1.2.nupkg.sha512",
     "C:\\Users\\albertbvi12\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.1.0\\fluentvalidation.dependencyinjectionextensions.11.1.0.nupkg.sha512",

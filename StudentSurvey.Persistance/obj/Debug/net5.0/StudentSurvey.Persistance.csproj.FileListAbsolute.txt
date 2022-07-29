@@ -77,3 +77,4 @@ D:\Desktop\StudentSurvey\StudentSurvey\StudentSurvey.Persistance\obj\Debug\net5.
 D:\Desktop\StudentSurvey\StudentSurvey\StudentSurvey.Persistance\obj\Debug\net5.0\ref\StudentSurvey.Persistance.dll
 D:\Desktop\StudentSurvey\StudentSurvey\StudentSurvey.Persistance\obj\Debug\net5.0\StudentSurvey.Persistance.pdb
 D:\Desktop\StudentSurvey\StudentSurvey\StudentSurvey.Persistance\obj\Debug\net5.0\StudentSurvey.Persistance.genruntimeconfig.cache
+D:\Desktop\StudentSurvey\StudentSurvey\StudentSurvey.Persistance\bin\Debug\net5.0\FluentAssertions.dll

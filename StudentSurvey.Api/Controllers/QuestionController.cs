@@ -10,13 +10,11 @@ namespace StudentSurvey.Api.Controllers
     public class QuestionController : ControllerBase
     {
         private readonly IQuestionService _questionService;
-
         
-
         public QuestionController(IQuestionService questionService)
         {
             _questionService = questionService;
-            
+
         }
 
         [HttpPost]
@@ -26,11 +24,13 @@ namespace StudentSurvey.Api.Controllers
         public IActionResult AddQuestion([FromBody] QuestionModel question)
         {
             var questionResult = _questionService.AddQuestion(question);
-           
+
             return CreatedAtAction(null, questionResult);
-           
-           
+
+
         }
         
+        
+
     }
 }

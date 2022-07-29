@@ -14,13 +14,16 @@ namespace StudentSurvey.Business.Services
     class QuestionService: IQuestionService
     {
         private readonly IQuestionsRepository _questionsRepository;
+        private readonly IQuestion_TypeRepository _question_TypeRepository;
         private readonly IMapper _mapper;
 
         public QuestionService(
             IQuestionsRepository questionsRepository,
+            IQuestion_TypeRepository question_TypeRepository,
             IMapper mapper)
         {
             _questionsRepository = questionsRepository;
+            _question_TypeRepository = question_TypeRepository;
             _mapper = mapper;
         }
 
@@ -29,8 +32,12 @@ namespace StudentSurvey.Business.Services
             var newQuestion = _questionsRepository.Add(_mapper.Map<Questions>(question));
             return newQuestion.Id;
         }
+        public int AddQuestionType(QuestionTypeModel questionType)
+        {
+            var newQuestionType = _question_TypeRepository.Add(_mapper.Map<Question_Type>(questionType));
+            return newQuestionType.Id;
+        }
 
-        
-        
+
     }
 }

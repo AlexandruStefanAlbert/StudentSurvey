@@ -10,7 +10,7 @@ namespace StudentSurvey.Business.Services.IServices
     public interface IQuestionService
     {
         int AddQuestion(QuestionModel question);
-
+        int AddQuestionType(QuestionTypeModel questionType);
 
     }
 }
