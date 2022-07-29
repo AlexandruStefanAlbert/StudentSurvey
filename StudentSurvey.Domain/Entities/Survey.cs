@@ -15,7 +15,7 @@ namespace MyHotel.Domain.Entities
         public User User { get; set; }
         public Topics Topics { get; set; }
         public Consent Consent{ get; set; }
-        public ICollection<Questions> Rooms { get; set; }
+        public ICollection<Questions> Questions { get; set; }
         public ICollection<Survey_Questions> SurveyQuestions { get; set; }
     }
 }

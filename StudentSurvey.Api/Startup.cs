@@ -31,6 +31,23 @@ namespace StudentSurvey.Api
         public void ConfigureServices(IServiceCollection services)
         {
             BuildMvc(services);
+
+            services.AddCors(options =>
+
+            {
+
+                options.AddPolicy(
+
+                name: "AllowOrigin",
+
+                builder => {
+
+                    builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
+
+                });
+
+            });
+
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
@@ -45,6 +62,7 @@ namespace StudentSurvey.Api
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            app.UseCors("AllowOrigin");
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
