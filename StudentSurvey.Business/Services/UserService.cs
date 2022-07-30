@@ -32,6 +32,10 @@ namespace StudentSurvey.Business.Services
             return _userRepository.GetById(id);
         }
 
+        public int GetByEmail(string email)
+        {
+            return _userRepository.GetUserByEmail(email);
+        }
         public int AddUser(UserModel user)
         {
             var newUser = _userRepository.Add(_mapper.Map<User > (user));

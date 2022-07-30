@@ -72,3 +72,4 @@ D:\Desktop\StudentSurvey\StudentSurvey\StudentSurvey.Business\obj\Debug\net5.0\r
 D:\Desktop\StudentSurvey\StudentSurvey\StudentSurvey.Business\obj\Debug\net5.0\StudentSurvey.Business.pdb
 D:\Desktop\StudentSurvey\StudentSurvey\StudentSurvey.Business\obj\Debug\net5.0\StudentSurvey.Business.genruntimeconfig.cache
 D:\Desktop\StudentSurvey\StudentSurvey\StudentSurvey.Business\bin\Debug\net5.0\FluentAssertions.dll
+D:\Desktop\StudentSurvey\StudentSurvey\StudentSurvey.Business\obj\Debug\net5.0\StudentSurvey.Business.csproj.CopyComplete

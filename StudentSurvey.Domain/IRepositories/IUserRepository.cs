@@ -9,5 +9,6 @@ namespace StudentSurvey.Domain.IRepositories
 {
     public interface IUserRepository : IBaseRepository<User>
     {
+        public int GetUserByEmail(string email);
     }
 }

@@ -12,6 +12,7 @@ namespace StudentSurvey.Business.Services.IServices
     {
         public IEnumerable<User> GetUsers();
         public User GetUser(int id);
+        public int GetByEmail(string email);
         public int AddUser(UserModel user);
         public void UpdateUser(User user);
         public void DeleteUser(int id);

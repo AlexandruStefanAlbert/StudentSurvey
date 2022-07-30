@@ -16,5 +16,12 @@ namespace StudentSurvey.Persistance.Repositories
         {
 
         }
+        public int GetUserByEmail(string email)
+        {
+            var user = (from x in _dbContext.Users
+                        where x.Email == email
+                        select x.Id).FirstOrDefault();
+            return user;
+        }
     }
 }
