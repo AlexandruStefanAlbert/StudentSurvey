@@ -27,5 +27,26 @@ namespace StudentSurvey.Business.Services.IServices
             var newAnswer = _answersRepository.Add(_mapper.Map<Answers>(answer));
             return newAnswer.Id;
         }
+
+        public IEnumerable<Answers> GetAnswers()
+        {
+            return _answersRepository.ListAll();
+        }
+        public Answers GetAnswer(int id)
+        {
+            return _answersRepository.GetById(id);
+        }
+        public void UpdateAnswer(Answers question)
+        {
+            _answersRepository.Update(question);
+        }
+        public void DeleteAnswer(int id)
+        {
+            var answer = _answersRepository.GetById(id);
+            if (answer != null)
+            {
+                _answersRepository.Delete(answer);
+            }
+        }
     }
 }

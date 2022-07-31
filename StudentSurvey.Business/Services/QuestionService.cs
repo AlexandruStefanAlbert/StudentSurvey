@@ -38,6 +38,27 @@ namespace StudentSurvey.Business.Services
             return newQuestionType.Id;
         }
 
+        public IEnumerable<Questions> GetQuestions()
+        {
+            return _questionsRepository.ListAll();
+        }
+        public Questions GetQuestion(int id)
+        {
+            return _questionsRepository.GetById(id);
+        }
+        public void UpdateQuestion(Questions question)
+        {
+            _questionsRepository.Update(question);
+        }
+        public void DeleteQuestion(int id)
+        {
+            var question = _questionsRepository.GetById(id);
+            if(question!=null)
+            {
+                _questionsRepository.Delete(question);
+            }
+        }
+
 
     }
 }

@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using MyHotel.Domain.Entities;
 using StudentSurvey.Business.Models;
 using StudentSurvey.Business.Services.IServices;
 
@@ -26,7 +27,44 @@ namespace StudentSurvey.Api.Controllers
             var answerResult = _answerService.AddAnswer(answer);
             return CreatedAtAction(null, answerResult);
         }
+
+        [HttpGet]
+
+        public IActionResult GetAll()
+        {
+            return Ok(_answerService.GetAnswers());
+        }
+
+        [HttpGet("{id}")]
+
+        public IActionResult GetById(int id)
+        {
+            var question = _answerService.GetAnswer(id);
+            {
+                if (question != null)
+                {
+                    return Ok(question);
+                }
+                return NotFound();
+            }
+        }
+
+        [HttpPut]
+        public IActionResult Update([FromBody] Answers answer)
+        {
+            _answerService.UpdateAnswer(answer);
+            return NoContent();
+        }
+
+        [HttpDelete("{id}")]
+
+        public IActionResult Delete(int id)
+        {
+            _answerService.DeleteAnswer(id);
+            return NoContent();
+        }
+
     }
 
-   
+
 }
