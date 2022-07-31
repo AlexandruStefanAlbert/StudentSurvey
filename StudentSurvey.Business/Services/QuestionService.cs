@@ -60,5 +60,14 @@ namespace StudentSurvey.Business.Services
         }
 
 
+        public Question_Type GetQuestion_TypeID(int id)
+        {
+            return _question_TypeRepository.GetById(id);
+        }
+        public IEnumerable<Question_Type> GetQuestion_Type()
+        {
+            return _question_TypeRepository.ListAll();
+        }
+
     }
 }

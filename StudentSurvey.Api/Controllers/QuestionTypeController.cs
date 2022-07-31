@@ -29,6 +29,23 @@ namespace StudentSurvey.Api.Controllers
 
         }
 
+        [HttpGet]
+
+        public IActionResult GetAll()
+        {
+            return Ok(_questionService.GetQuestion_Type());
+        }
+        [HttpGet("{id}")]
+        public IActionResult GetById(int id)
+        {
+            var type = _questionService.GetQuestion_TypeID(id);
+            if(type!=null)
+            {
+                return Ok(type);
+            }
+            return NotFound();
+        }
+
 
     }
 }

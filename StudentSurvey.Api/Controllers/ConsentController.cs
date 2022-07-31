@@ -8,64 +8,56 @@ namespace StudentSurvey.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class UserController : ControllerBase
+    public class ConsentController : ControllerBase
     {
-        private readonly IUserService _userService;
+        private readonly IConsentService _consentService;
 
-        public UserController(IUserService userService)
+        public ConsentController(IConsentService consentService)
         {
-            _userService = userService;
+            _consentService = consentService;
         }
-
-
 
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
 
-        public IActionResult AddUser([FromBody] UserModel user)
+        public IActionResult AddConsent([FromBody] ConsentModel consent)
         {
-            var userResult = _userService.AddUser(user);
-            return CreatedAtAction(null, userResult);
+            var consentResult = _consentService.AddConsent(consent);
+            return CreatedAtAction(null, consentResult);
         }
 
         [HttpGet]
-
         public IActionResult GetAll()
         {
-            return Ok(_userService.GetUsers());
+            return Ok(_consentService.GetConsents());
         }
 
         [HttpGet("{id}")]
+
         public IActionResult GetById(int id)
         {
-            var user = _userService.GetUser(id);
+            var consent = _consentService.GetConsent(id);
+            if(consent!=null)
             {
-                if (user != null)
-                {
-                    return Ok(user);
-                }
-                return NotFound();
+                return Ok(consent);
             }
+            return NotFound();
         }
-
 
         [HttpPut]
-        public IActionResult Update([FromBody] User user)
+        public IActionResult Update([FromBody] Consent consent)
         {
-            _userService.UpdateUser(user);
+            _consentService.UpdateConsent(consent);
             return NoContent();
         }
-
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
-            _userService.DeleteUser(id);
+            _consentService.DeleteConsent(id);
             return NoContent();
-
         }
+
     }
-
-
 
 }

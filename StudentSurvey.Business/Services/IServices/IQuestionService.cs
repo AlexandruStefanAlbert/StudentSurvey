@@ -10,13 +10,15 @@ namespace StudentSurvey.Business.Services.IServices
 {
     public interface IQuestionService
     {
-        int AddQuestion(QuestionModel question);
-        int AddQuestionType(QuestionTypeModel questionType);
-
+        public int AddQuestion(QuestionModel question);
         public IEnumerable<Questions> GetQuestions();
         public Questions GetQuestion(int id);
         public void UpdateQuestion(Questions user);
         public void DeleteQuestion(int id);
+
+        public int AddQuestionType(QuestionTypeModel questionType);
+        public Question_Type GetQuestion_TypeID(int id);
+        public IEnumerable<Question_Type> GetQuestion_Type();
 
     }
 }
