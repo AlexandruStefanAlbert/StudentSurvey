@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using StudentSurvey.Persistance.Data;
 
 namespace StudentSurvey.Persistance.Data.Migrations
 {
     [DbContext(typeof(StudentSurveyDbContext))]
-    partial class StudentSurveyDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220731115643_DBModified")]
+    partial class DBModified
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

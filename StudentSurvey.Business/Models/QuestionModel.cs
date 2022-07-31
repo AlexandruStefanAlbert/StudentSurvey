@@ -11,6 +11,6 @@ namespace StudentSurvey.Business.Models
     {
         public int Question_TypeID { get; set; }
         public string Question { get; set; }
-        //public Answers Answers { get; set; }
+        
     }
 }

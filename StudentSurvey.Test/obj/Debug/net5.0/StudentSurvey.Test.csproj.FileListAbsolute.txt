@@ -447,3 +447,4 @@ D:\Desktop\StudentSurvey\StudentSurvey\StudentSurvey.Test\obj\Debug\net5.0\ref\S
 D:\Desktop\StudentSurvey\StudentSurvey\StudentSurvey.Test\obj\Debug\net5.0\StudentSurvey.Test.pdb
 D:\Desktop\StudentSurvey\StudentSurvey\StudentSurvey.Test\obj\Debug\net5.0\StudentSurvey.Test.genruntimeconfig.cache
 D:\Desktop\StudentSurvey\StudentSurvey\StudentSurvey.Test\bin\Debug\net5.0\FluentAssertions.dll
+D:\Desktop\StudentSurvey\StudentSurvey\StudentSurvey.Test\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

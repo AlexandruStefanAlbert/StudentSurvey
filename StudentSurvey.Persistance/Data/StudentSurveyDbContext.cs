@@ -47,7 +47,7 @@ namespace StudentSurvey.Persistance.Data
         {
             modelBuilder.Entity<User>().HasData(new List<User>()
             {
-                new User()
+                /*new User()
                 {
                     Id = 20,
                     Username = "User",
@@ -69,17 +69,17 @@ namespace StudentSurvey.Persistance.Data
                     PhoneNumber = "0712345671",
                     IsAdmin = true
                 }
-                
+                */
 
 
             });
             modelBuilder.Entity<Question_Type>().HasData(new List<Question_Type>()
             {
-                new Question_Type()
+                /*new Question_Type()
                 {
                     Id=1,
                     QuestionType= "Selector"
-                }
+                }*/
 
 
 

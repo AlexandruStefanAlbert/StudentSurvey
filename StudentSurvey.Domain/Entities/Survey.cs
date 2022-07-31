@@ -14,8 +14,7 @@ namespace MyHotel.Domain.Entities
         public string Modified_By { get; set; }            
         public User User { get; set; }
         public Topics Topics { get; set; }
-        public Consent Consent{ get; set; }
-        public ICollection<Questions> Questions { get; set; }
+        public Consent Consent{ get; set; } 
         public ICollection<Survey_Questions> SurveyQuestions { get; set; }
     }
 }

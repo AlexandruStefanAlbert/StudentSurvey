@@ -17,6 +17,8 @@ namespace StudentSurvey.Business.Profiles
             CreateMap<Questions, QuestionModel>().ReverseMap();
             CreateMap<Question_Type, QuestionTypeModel>().ReverseMap();
             CreateMap<Answers, AnswerModel>().ReverseMap();
+            CreateMap<Survey, SurveyModel>().ReverseMap();
+            CreateMap<Topics, TopicModel>().ReverseMap();
 
         }
     }
