@@ -9,5 +9,6 @@ namespace StudentSurvey.Domain.IRepositories
 {
     public interface ISurveyRepository: IBaseRepository <Survey>
     {
+        
     }
 }

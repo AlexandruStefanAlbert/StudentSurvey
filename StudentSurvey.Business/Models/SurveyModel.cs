@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyHotel.Domain.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,7 @@ namespace StudentSurvey.Business.Models
         public DateTime Closing_Time { get; set; }
         public string Created_By { get; set; }
         public string Modified_By { get; set; }
+        
 
     }
 }

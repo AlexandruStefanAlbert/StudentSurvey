@@ -14,6 +14,7 @@ namespace StudentSurvey.Business.Services
     public class SurveyService: ISurveyService
     {
         private readonly ISurveyRepository _surveyRepository;
+     
         private readonly IMapper _mapper;
 
         public SurveyService(ISurveyRepository surveyRepository, IMapper mapper)
@@ -37,6 +38,7 @@ namespace StudentSurvey.Business.Services
             var newSurvey = _surveyRepository.Add(_mapper.Map<Survey>(survey));
             return newSurvey.Id;
         }
+   
 
         public void UpdateSurvey(Survey survey)
         {

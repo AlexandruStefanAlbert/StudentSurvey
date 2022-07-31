@@ -15,6 +15,7 @@ namespace StudentSurvey.Business
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<ISurveyService, SurveyService>();
             services.AddScoped<ITopicService, TopicService>();
+            services.AddScoped<ISurvey_QuestionService, Survey_QuestionService>();
             services.AddAutoMapper(Assembly.GetExecutingAssembly());
             return services;
         }
