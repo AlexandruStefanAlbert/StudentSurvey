@@ -15,6 +15,8 @@ namespace StudentSurvey.Business.Services.IServices
         public int AddSurvey(SurveyModel survey);
         public void UpdateSurvey(Survey survey);
         public void DeleteSurvey(int id);
+
+        public void DeleteByName(string name);
        
     }
 }

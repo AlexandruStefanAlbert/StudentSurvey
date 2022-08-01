@@ -17,6 +17,13 @@ namespace StudentSurvey.Persistance.Repositories
 
         }
 
-       
+        public int GetByName(String name)
+        {
+            var survey = (from x in _dbContext.Surveys
+                          where x.Name == name
+                          select x.Id).FirstOrDefault();
+            return survey;
+        }
+  
     }
 }

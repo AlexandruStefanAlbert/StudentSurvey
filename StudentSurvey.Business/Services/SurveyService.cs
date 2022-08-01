@@ -38,7 +38,10 @@ namespace StudentSurvey.Business.Services
             var newSurvey = _surveyRepository.Add(_mapper.Map<Survey>(survey));
             return newSurvey.Id;
         }
-   
+        public int GetByName(string name)
+        {
+            return _surveyRepository.GetByName(name);
+        }
 
         public void UpdateSurvey(Survey survey)
         {
@@ -53,5 +56,17 @@ namespace StudentSurvey.Business.Services
                 _surveyRepository.Delete(survey);
             }
         }
+
+        public void DeleteByName(string name)
+        {
+            var surveyId = _surveyRepository.GetByName(name);
+            var survey = _surveyRepository.GetById(surveyId);
+
+            if(survey!=null)
+            {
+                _surveyRepository.Delete(survey);
+            }
+        }
+       
     }
 }

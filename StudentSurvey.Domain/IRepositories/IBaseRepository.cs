@@ -10,5 +10,7 @@ namespace StudentSurvey.Domain.IRepositories
         void Update(T entity);
         void Delete(T entity);
 
+        
+
     }
 }

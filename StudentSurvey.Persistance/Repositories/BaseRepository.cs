@@ -39,6 +39,7 @@ namespace StudentSurvey.Persistance.Repositories
         {
             return _dbContext.Set<T>().Find(email);
         }
+       
 
         public IReadOnlyList<T> ListAll()
         {

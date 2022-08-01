@@ -53,10 +53,10 @@ namespace StudentSurvey.Api.Controllers
             _surveyService.UpdateSurvey(survey);
             return NoContent();
         }
-        [HttpDelete("{id}")]
-        public IActionResult Delete(int id)
+        [HttpDelete("{name}")]
+        public IActionResult Delete(string name)
         {
-            _surveyService.DeleteSurvey(id);
+            _surveyService.DeleteByName(name);
             return NoContent();
         }
 

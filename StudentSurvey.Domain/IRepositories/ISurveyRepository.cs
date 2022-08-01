@@ -9,6 +9,7 @@ namespace StudentSurvey.Domain.IRepositories
 {
     public interface ISurveyRepository: IBaseRepository <Survey>
     {
+        public int GetByName(string name);
         
     }
 }
