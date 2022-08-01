@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace StudentSurvey.Business.Services
 {
-    class QuestionService: IQuestionService
+    public class QuestionService: IQuestionService
     {
         private readonly IQuestionsRepository _questionsRepository;
         private readonly IQuestion_TypeRepository _question_TypeRepository;

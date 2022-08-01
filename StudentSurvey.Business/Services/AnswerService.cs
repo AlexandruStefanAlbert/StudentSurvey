@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace StudentSurvey.Business.Services.IServices
 {
-    class AnswerService :  IAnswerService
+    public class AnswerService :  IAnswerService
     {
         private readonly IAnswersRepository _answersRepository;
         private readonly IMapper _mapper;

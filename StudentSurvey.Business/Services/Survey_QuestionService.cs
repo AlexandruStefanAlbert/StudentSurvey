@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace StudentSurvey.Business.Services
 {
-    class Survey_QuestionService: ISurvey_QuestionService
+    public class Survey_QuestionService: ISurvey_QuestionService
     {
         private readonly ISurvey_QuestionsRepository _survey_QuestionsRepository;
         private readonly IMapper _mapper;
