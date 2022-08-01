@@ -53,7 +53,7 @@ namespace StudentSurvey.Test
             var expectedDataChangeTopic = "Food";
             var topic = new TopicModel
             {
-                //Id = Convert.ToInt32(TopicIdfromresult),
+                Id = Convert.ToInt32(TopicIdfromresult),
                 Topic =expectedDataChangeTopic
             };
             var resultforUpdateTopic = await HttpClient.PutAsJsonAsync("api/Topic", topic);

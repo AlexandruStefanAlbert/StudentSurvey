@@ -13,15 +13,24 @@ namespace StudentSurvey.Test
     public class QuestionControllerTest : BaseIntegrationTests
     {
 
-        /*[TestMethod]
+       [TestMethod]
         public async Task When_AddQuestion_ShouldAddQuestion()
         {
 
+            var Question_Type = new QuestionTypeModel
+            {
+                QuestionType = "Food"
+            };
+            var resultss = await HttpClient.PostAsJsonAsync("api/QuestionType", Question_Type);
+
+
+            resultss.EnsureSuccessStatusCode();
+            var QuestionTypeIdFromResult = await resultss.Content.ReadAsStringAsync();
 
             var Addquestion = new QuestionModel
             {
                 Question = "Care?",
-                Question_TypeID = 20
+                Question_TypeID = Convert.ToInt32(QuestionTypeIdFromResult)
 
             };
             var result = await HttpClient.PostAsJsonAsync("api/Question", Addquestion);
@@ -40,11 +49,20 @@ namespace StudentSurvey.Test
         [TestMethod]
         public async Task When_UpdateQuestion_ShouldChangeQuestionData()
         {
+            var Question_Type = new QuestionTypeModel
+            {
+                QuestionType = "Food"
+            };
+            var resultss = await HttpClient.PostAsJsonAsync("api/QuestionType", Question_Type);
+
+
+            resultss.EnsureSuccessStatusCode();
+            var QuestionTypeIdFromResult = await resultss.Content.ReadAsStringAsync();
 
             var Addquestion = new QuestionModel
             {
                 Question = "Care?",
-                Question_TypeID = 20
+                Question_TypeID = Convert.ToInt32(QuestionTypeIdFromResult)
 
             };
             var result = await HttpClient.PostAsJsonAsync("api/Question", Addquestion);
@@ -57,7 +75,7 @@ namespace StudentSurvey.Test
             {
                 Id = Convert.ToInt32(questionIdfromresult),
                 Question = expectedDataChangeQuestion,
-                Question_TypeID = 20
+                Question_TypeID = Convert.ToInt32(QuestionTypeIdFromResult)
             };
             var resultforUpdateUser = await HttpClient.PutAsJsonAsync("api/Question", question);
             //Assert
@@ -73,7 +91,7 @@ namespace StudentSurvey.Test
 
 
         }
-        */
+        
         [TestMethod]
         public async Task When_GetAll_ShouldGiveOKResponse()
         {

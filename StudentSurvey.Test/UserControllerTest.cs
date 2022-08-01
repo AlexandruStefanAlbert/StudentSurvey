@@ -64,7 +64,7 @@ namespace StudentSurvey.Test
             var expectedDataChangeUser = "Vasilic";
             var user = new UserModel
             {
-                //Id = Convert.ToInt32(userIdfromresult),
+                Id = Convert.ToInt32(userIdfromresult),
                 Username = expectedDataChangeUser,
                 Email = "alex@gmail.com",
                 FirstName = "Alexandru",
@@ -101,6 +101,7 @@ namespace StudentSurvey.Test
             Assert.AreEqual(HttpStatusCode.OK, response.StatusCode);
 
         }
+
 
     }
 }

@@ -31,10 +31,10 @@ namespace StudentSurvey.Test
 
             HttpClient = _application.CreateClient();
 
-            //await CleanupDatabase();
+            await CleanupDatabase();
         }
 
-       /* [TestCleanup]
+       [TestCleanup]
         public async Task TestCleanup()
         {
             await CleanupDatabase();
@@ -48,7 +48,8 @@ namespace StudentSurvey.Test
             databaseContext.Answers.RemoveRange(databaseContext.Answers.ToList());
             databaseContext.Questions.RemoveRange(databaseContext.Questions.ToList());
             databaseContext.Question_Types.RemoveRange(databaseContext.Question_Types.ToList());
+            databaseContext.Consents.RemoveRange(databaseContext.Consents.ToList());
             await databaseContext.SaveChangesAsync();
-        }*/
+        }
     }
 }

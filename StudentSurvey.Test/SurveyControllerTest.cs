@@ -69,7 +69,7 @@ namespace StudentSurvey.Test
             var expectedDataChangeSurvey = "Food";
             var survey = new SurveyModel
             {
-                //Id = Convert.ToInt32(surveyIdfromresult),
+                Id = Convert.ToInt32(surveyIdfromresult),
                 Name = expectedDataChangeSurvey,
                 Description = "Descriere",
                 Opening_Time = DateTime.Now.AddMinutes(1),
