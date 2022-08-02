@@ -46,7 +46,7 @@ namespace StudentSurvey.Test
         {
 
 
-            var Adduser = new UserModel
+            var Adduser = new User
             {
                 Username = "Vasilica",
                 Email = "alex@gmail.com",
@@ -62,9 +62,9 @@ namespace StudentSurvey.Test
             var userIdfromresult = await result.Content.ReadAsStringAsync();
 
             var expectedDataChangeUser = "Vasilic";
-            var user = new UserModel
+            var user = new User
             {
-                //Id = Convert.ToInt32(userIdfromresult),
+                Id = Convert.ToInt32(userIdfromresult),
                 Username = expectedDataChangeUser,
                 Email = "alex@gmail.com",
                 FirstName = "Alexandru",
