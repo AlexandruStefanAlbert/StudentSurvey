@@ -28,7 +28,7 @@ namespace StudentSurvey.Test
             resultTopic.EnsureSuccessStatusCode();
             var TopicIdFromResult = await resultTopic.Content.ReadAsStringAsync();
 
-            var Addsurvey = new SurveyModel
+            var Addsurvey = new Survey
             {
                 IDTopic = Convert.ToInt32(TopicIdFromResult),
                 Name = "Name",
@@ -53,7 +53,7 @@ namespace StudentSurvey.Test
             resultQuestionType.EnsureSuccessStatusCode();
             var QuestionTypeIdFromResult = await resultQuestionType.Content.ReadAsStringAsync();
 
-            var Question = new QuestionModel
+            var Question = new Questions
             {
                 Question = "Ce?",
                 Question_TypeID = Convert.ToInt32(QuestionTypeIdFromResult)

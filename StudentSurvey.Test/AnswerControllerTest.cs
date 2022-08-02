@@ -96,9 +96,9 @@ namespace StudentSurvey.Test
             var AnswerIdfromresult = await result.Content.ReadAsStringAsync();
 
             var expectedDataChangeAnswer = "Merge";
-            var answer = new AnswerModel
+            var answer = new Answers
             {
-                //Id = Convert.ToInt32(AnswerIdfromresult),
+                Id = Convert.ToInt32(AnswerIdfromresult),
                 QuestionID = Convert.ToInt32(QuestionIdFromResult),
                 Option1 = "Are",
                 Option2 = "Bere",

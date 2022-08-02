@@ -30,7 +30,7 @@ namespace StudentSurvey.Test
 
             var Addsurvey = new SurveyModel
             {
-                IDTopic = Convert.ToInt32(TopicIdFromResult),
+                //IDTopic = Convert.ToInt32(TopicIdFromResult),
                 Name = "Name",
                 Description = "Descriere2",
                 Opening_Time = DateTime.Now.AddMinutes(1),
@@ -88,7 +88,7 @@ namespace StudentSurvey.Test
             //Assert
             resultUser.EnsureSuccessStatusCode();
             var userIdfromresult = await resultUser.Content.ReadAsStringAsync();
-            var Addsurvey_Answer = new Survey_AnswerModel
+            var Addsurvey_Answer = new Survey_Answers
             {
                 Survey_QuestionID = Convert.ToInt32(Survey_QuestionIdfromresult),
                 UserID = Convert.ToInt32(userIdfromresult),
@@ -111,7 +111,7 @@ namespace StudentSurvey.Test
         [TestMethod]
         public async Task When_UpdateAnswer_ShouldChangeAnswerData()
         {
-            var AddTopic = new TopicModel
+            var AddTopic = new Topics
             {
                 Topic = "Food"
             };
@@ -121,7 +121,7 @@ namespace StudentSurvey.Test
             resultTopic.EnsureSuccessStatusCode();
             var TopicIdFromResult = await resultTopic.Content.ReadAsStringAsync();
 
-            var Addsurvey = new SurveyModel
+            var Addsurvey = new Survey
             {
                 IDTopic = Convert.ToInt32(TopicIdFromResult),
                 Name = "Name",
@@ -194,7 +194,7 @@ namespace StudentSurvey.Test
 
             var Survey_AnswerIdfromresult = await result.Content.ReadAsStringAsync();
             var expectedDataChangeSurvey_Answer = "Nu";
-            var survey_Answer = new Survey_AnswerModel
+            var survey_Answer = new Survey_Answers
             {
                 Id=Convert.ToInt32(Survey_AnswerIdfromresult),
                 Survey_QuestionID = Convert.ToInt32(Survey_QuestionIdfromresult),

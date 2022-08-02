@@ -50,7 +50,7 @@ namespace StudentSurvey.Test
         {
 
 
-            var Addsurvey = new SurveyModel
+            var Addsurvey = new Survey
             {
                 IDTopic =99,
                 Name = "Name",
@@ -67,9 +67,9 @@ namespace StudentSurvey.Test
             var surveyIdfromresult = await result.Content.ReadAsStringAsync();
 
             var expectedDataChangeSurvey = "Food";
-            var survey = new SurveyModel
+            var survey = new Survey
             {
-                Id = Convert.ToInt32(surveyIdfromresult),
+                //Id = Convert.ToInt32(surveyIdfromresult),
                 Name = expectedDataChangeSurvey,
                 Description = "Descriere",
                 Opening_Time = DateTime.Now.AddMinutes(1),

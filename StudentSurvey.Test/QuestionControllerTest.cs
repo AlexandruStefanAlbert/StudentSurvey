@@ -71,7 +71,7 @@ namespace StudentSurvey.Test
             var questionIdfromresult = await result.Content.ReadAsStringAsync();
 
             var expectedDataChangeQuestion = "Cum?";
-            var question = new QuestionModel
+            var question = new Questions
             {
                 Id = Convert.ToInt32(questionIdfromresult),
                 Question = expectedDataChangeQuestion,

@@ -133,9 +133,9 @@ namespace StudentSurvey.Test
              var ConsentIdfromresult = await result.Content.ReadAsStringAsync();
 
              var expectedDataChangeConsent = false;
-             var consent = new ConsentModel
+             var consent = new Consent
              {
-                 //Id = Convert.ToInt32(ConsentIdfromresult),
+                 Id = Convert.ToInt32(ConsentIdfromresult),
                  UserID = Convert.ToInt32(UserTypeIdFromResult),
                  SurveyID = Convert.ToInt32(surveyIdfromresult),
                  ExpirationDate = DateTime.Now.AddMonths(36),

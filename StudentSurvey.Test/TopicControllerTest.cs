@@ -40,7 +40,7 @@ namespace StudentSurvey.Test
         {
 
 
-            var AddTopic = new TopicModel
+            var AddTopic = new Topics
             {
 
                 Topic = "Car"
@@ -51,7 +51,7 @@ namespace StudentSurvey.Test
             var TopicIdfromresult = await result.Content.ReadAsStringAsync();
 
             var expectedDataChangeTopic = "Food";
-            var topic = new TopicModel
+            var topic = new Topics
             {
                 Id = Convert.ToInt32(TopicIdfromresult),
                 Topic =expectedDataChangeTopic
